@@ -32,6 +32,55 @@ function stanford_paragraphs_defaults_permission() {
 }
 
 /**
+ * Implements hook_entity_load().
+ */
+function stanford_paragraphs_defaults_entity_load($entities, $type) {
+  if ($type == 'paragraphs_item') {
+    foreach ($entities as &$entity) {
+      list($entity_id, , $bundle) = entity_extract_ids($type, $entity);
+      $exists = db_select('stanford_paragraphs_defaults', 's')
+        ->fields('s')
+        ->condition('item_ids', "%:$entity_id;%", 'LIKE')
+        ->execute()
+        ->rowCount();
+
+      // We only care about the paragraph entities in the defaults.
+      if ($exists) {
+        stanford_paragraphs_defaults_clean_entity($entity, $type, $bundle);
+      }
+    }
+  }
+}
+
+/**
+ * Make sure field collection fields are properly formatted.
+ *
+ * @param object $entity
+ *   Object to clean.
+ * @param string $type
+ *   Type of the entity.
+ * @param string $bundle
+ *   Bundle of the entity.
+ */
+function stanford_paragraphs_defaults_clean_entity(&$entity, $type, $bundle) {
+  $fields = field_read_fields(array(
+    'type' => 'field_collection',
+    'entity_type' => $type,
+    'bundle' => $bundle,
+  ));
+  foreach (array_keys($fields) as $field_name) {
+    if (!empty($entity->{$field_name})) {
+      foreach ($entity->{$field_name}[LANGUAGE_NONE] as $delta => &$value) {
+        if (is_object($value)) {
+          list($value, $revision_id,) = entity_extract_ids('field_collection_item', $value);
+          $value = array('value' => $value, 'revision_id' => $revision_id);
+        }
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_entity_delete().
  */
 function stanford_paragraphs_defaults_entity_delete($entity, $type) {
