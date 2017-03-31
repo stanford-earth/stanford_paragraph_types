@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stanford_teaser_card.field_p_teasercard_headline
+    - field.field.paragraph.stanford_teaser_card.field_p_teasercard_image
+    - field.field.paragraph.stanford_teaser_card.field_p_teasercard_link
+    - field.field.paragraph.stanford_teaser_card.field_p_teasercard_teaser
+    - image.style.medium
+    - paragraphs.paragraphs_type.stanford_teaser_card
+  module:
+    - field_formatter_class
+    - image
+    - link
+id: paragraph.stanford_teaser_card.default
+targetEntityType: paragraph
+bundle: stanford_teaser_card
+mode: default
+content:
+  field_p_teasercard_headline:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: string
+  field_p_teasercard_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: image
+  field_p_teasercard_link:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: link
+  field_p_teasercard_teaser:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+hidden: {  }
