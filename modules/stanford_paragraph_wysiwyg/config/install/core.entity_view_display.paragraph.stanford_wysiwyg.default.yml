@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.stanford_wysiwyg.field_p_wysiwyg
+    - paragraphs.paragraphs_type.stanford_wysiwyg
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_basic
+      library: stanford_layouts/basic
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_p_wysiwyg
+id: paragraph.stanford_wysiwyg.default
+targetEntityType: paragraph
+bundle: stanford_wysiwyg
+mode: default
+content:
+  field_p_wysiwyg:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  created: true
+  uid: true
