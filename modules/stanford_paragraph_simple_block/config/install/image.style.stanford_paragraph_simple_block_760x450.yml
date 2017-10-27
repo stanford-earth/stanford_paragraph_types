@@ -1,6 +1,16 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - focal_point
 name: stanford_paragraph_simple_block_760x450
 label: 'Stanford paragraph simple block 760x450'
-effects: {  }
+effects:
+  123649f6-b830-4bae-b810-0a8fe2a0acf2:
+    uuid: 123649f6-b830-4bae-b810-0a8fe2a0acf2
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 760
+      height: 450
+      crop_type: focal_point
