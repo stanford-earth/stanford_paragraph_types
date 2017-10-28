@@ -1,5 +1,5 @@
 # [Stanford Paragraph Types](https://github.com/SU-SWS/stanford_paragraph_types)
-##### Version: 8.x-1.x
+##### Version: 8.x-1.0-dev
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
 [Changelog.txt](CHANGELOG.txt)
@@ -10,7 +10,7 @@ Paragraph types.
 Installation
 ---
 
-Install this module like any other module. [See Drupal Documentation](https://drupal.org/documentation/install/modules-themes/modules-7)
+Install this module like any other module. [See Drupal Documentation](https://drupal.org/documentation/install/modules-themes/modules-8)
 
 Configuration
 ---

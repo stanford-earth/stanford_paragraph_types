@@ -1,6 +1,6 @@
-Stanford Module
+Stanford Paragraph Types
 
-Version 7.x-1.0                                                       YYYY-MM-DD
+Version 8.x-1.0-alpha1                                                       YYYY-MM-DD
 --------------------------------------------------------------------------------
 
 - Initial Release

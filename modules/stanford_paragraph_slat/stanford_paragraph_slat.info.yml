@@ -2,6 +2,8 @@ name: 'Slat Paragraph'
 description: 'Simple slat paragraph type.'
 type: module
 core: 8.x
+package: Stanford
+version: 8.x-1.0-alpha1
 dependencies:
   - ds
   - field
@@ -16,4 +18,3 @@ dependencies:
   - responsive_image
   - stanford_page
   - stanford_paragraph_slat
-package: Stanford

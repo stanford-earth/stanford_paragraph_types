@@ -2,6 +2,8 @@ name: 'Simple Block'
 description: 'A simple block component.'
 type: module
 core: 8.x
+package: Stanford
+version: 8.x-1.0-alpha1
 dependencies:
   - ds
   - field
@@ -16,4 +18,3 @@ dependencies:
   - responsive_image
   - stanford_image_styles
   - stanford_paragraph_types
-version: 8.x-1.0-dev

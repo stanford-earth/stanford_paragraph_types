@@ -2,7 +2,8 @@ name: 'Video Paragraph'
 description: '3rd party video player paragraph type.'
 type: module
 core: 8.x
-Package: Stanford
+package: Stanford
+version: 8.x-1.0-alpha1
 dependencies:
   - ds
   - field
