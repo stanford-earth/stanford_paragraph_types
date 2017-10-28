@@ -17,4 +17,4 @@ dependencies:
   - stanford_paragraph_expandable_card
   - stanford_paragraph_icon_link
   - stanford_paragraph_types
-version: 8.x-1.0-alpha1
+version: 8.x-1.0-dev

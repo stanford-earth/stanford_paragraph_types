@@ -2,7 +2,7 @@ name: 'Film Card Paragraph'
 type: module
 core: 8.x
 package: Stanford
-version: 8.x-1.0-alpha1
+version: 8.x-1.0-dev
 dependencies:
   - ds
   - field
