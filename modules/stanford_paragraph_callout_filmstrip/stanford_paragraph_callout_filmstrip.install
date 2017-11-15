@@ -27,3 +27,34 @@ function stanford_paragraph_callout_filmstrip_update_8100() {
   }
 
 }
+
+/**
+ * Update field from plain text to rich.
+ */
+function stanford_paragraph_tall_filmstrip_update_8101() {
+  // Common function included here.
+  module_load_include('install', 'stanford_paragraph_types');
+
+  // The field and db tables to changes.
+  $fields = [
+    'field_p_callout_film_s_head' => [
+      'table' => 'paragraph__field_p_callout_film_s_head',
+      'revision_table' => 'paragraph_revision__field_p_callout_film_s_head',
+      'format_col' => 'field_p_callout_film_s_head_format',
+    ],
+  ];
+
+  // Change the DB tables and preserve the data.
+  _stanford_paragraph_types_change_to_formatted($fields);
+
+  // Update and save the new config.
+  $name = 'field_p_callout_film_s_head';
+  $bundle = "stanford_callout_filmstrip";
+
+  // Do it.
+  $field = \Drupal::entityTypeManager()
+    ->getStorage('field_config')
+    ->load("paragraph.$bundle.$name");
+  $field->save();
+
+}

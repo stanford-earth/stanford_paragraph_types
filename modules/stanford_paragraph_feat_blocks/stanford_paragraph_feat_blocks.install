@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Install functions.
+ */
+
+/**
+ * Update field from plain text to rich.
+ */
+function stanford_paragraph_feat_blocks_update_8100() {
+  // Common function included here.
+  module_load_include('install', 'stanford_paragraph_types');
+
+  // The field and db tables to changes.
+  $fields = [
+    'field_p_feat_blocks_description' => [
+      'table' => 'paragraph__field_p_feat_blocks_description',
+      'revision_table' => 'paragraph_revision__field_p_feat_blocks_description',
+      'format_col' => 'field_p_feat_blocks_description_format',
+    ],
+  ];
+
+  // Change the DB tables and preserve the data.
+  _stanford_paragraph_types_change_to_formatted($fields);
+
+  // Update and save the new config.
+  $name = 'field_p_feat_blocks_description';
+  $bundle = "stanford_paragraph_feat_blocks";
+
+  // Do it.
+  $field = \Drupal::entityTypeManager()
+    ->getStorage('field_config')
+    ->load("paragraph.$bundle.$name");
+  $field->save();
+
+}
