@@ -9,6 +9,7 @@ dependencies:
   module:
     - ds
     - entity_reference_revisions
+    - text
 third_party_settings:
   ds:
     layout:
@@ -54,12 +55,12 @@ content:
     third_party_settings: {  }
     region: items
   field_p_callout_cards_desc:
-    weight: 1
+    type: text_default
+    weight: 0
+    region: subhead
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: subhead
   field_p_callout_cards_title:
     weight: 2
     label: hidden
