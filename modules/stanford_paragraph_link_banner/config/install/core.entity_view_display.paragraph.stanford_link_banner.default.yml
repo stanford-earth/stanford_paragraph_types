@@ -13,6 +13,7 @@ dependencies:
     - entity_reference_revisions
     - field_formatter_class
     - image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -22,7 +23,7 @@ third_party_settings:
       entity_classes: all_classes
       settings:
         pattern:
-          field_templates: default
+          field_templates: only_content
     regions:
       description:
         - field_p_link_banner_description
@@ -38,7 +39,7 @@ bundle: stanford_link_banner
 mode: default
 content:
   field_p_link_banner_description:
-    type: basic_string
+    type: text_default
     weight: 0
     region: description
     label: hidden
