@@ -270,6 +270,16 @@ function _stanford_paragraph_types_change_to_formatted(array $fields = array(), 
       $field = FieldConfig::loadByName($entity_type, $bundle, $field_name);
       $new_field = $field->toArray();
       $new_field['field_type'] = 'text_long';
+      $new_field['third_party_settings'] = [
+        'allowed_formats' => [
+          'restricted_html' => '0',
+          'content_editor' => '0',
+          'markdown' => '0',
+          'basic_html' => 'basic_html',
+          'full_html' => '0',
+          'plain_text' => '0',
+        ],
+      ];
       $new_fields[] = $new_field;
       // Delete field.
       $field->delete();
