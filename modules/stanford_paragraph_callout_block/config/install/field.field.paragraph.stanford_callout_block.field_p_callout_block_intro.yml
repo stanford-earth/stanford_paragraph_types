@@ -12,7 +12,7 @@ third_party_settings:
     restricted_html: '0'
     content_editor: '0'
     markdown: '0'
-    basic_html: 'basic_html'
+    basic_html: basic_html
     full_html: '0'
     plain_text: '0'
 id: paragraph.stanford_callout_block.field_p_callout_block_intro

@@ -7,9 +7,8 @@ dependencies:
 id: paragraph.field_p_callout_block_intro
 field_name: field_p_callout_block_intro
 entity_type: paragraph
-type: text
-settings:
-  max_length: 255
+type: text_long
+settings: {  }
 module: text
 locked: false
 cardinality: 1
