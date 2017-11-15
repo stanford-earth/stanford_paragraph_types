@@ -31,7 +31,7 @@ function stanford_paragraph_callout_filmstrip_update_8100() {
 /**
  * Update field from plain text to rich.
  */
-function stanford_paragraph_tall_filmstrip_update_8101() {
+function stanford_paragraph_callout_filmstrip_update_8101() {
   // Common function included here.
   module_load_include('install', 'stanford_paragraph_types');
 

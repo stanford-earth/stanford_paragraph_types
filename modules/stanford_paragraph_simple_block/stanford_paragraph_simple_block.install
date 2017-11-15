@@ -16,7 +16,7 @@ function stanford_paragraph_simple_block_update_8100() {
   $fields = [
     'field_p_simple_block_description' => [
       'table' => 'paragraph__field_p_simple_block_description',
-      'revision_table' => 'paragraph_revision__field_p_simple_block_description',
+      'revision_table' => 'paragraph_r__62f62469b4',
       'format_col' => 'field_p_simple_block_description_format',
     ],
   ];

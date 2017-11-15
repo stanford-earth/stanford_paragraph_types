@@ -16,7 +16,7 @@ function stanford_paragraph_link_banner_update_8100() {
   $fields = [
     'field_p_link_banner_description' => [
       'table' => 'paragraph__field_p_link_banner_description',
-      'revision_table' => 'paragraph_revision__field_p_link_banner_description',
+      'revision_table' => 'paragraph_r__0dd148bc3d',
       'format_col' => 'field_p_link_banner_description_format',
     ],
   ];

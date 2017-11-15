@@ -16,7 +16,7 @@ function stanford_paragraph_feat_blocks_update_8100() {
   $fields = [
     'field_p_feat_blocks_description' => [
       'table' => 'paragraph__field_p_feat_blocks_description',
-      'revision_table' => 'paragraph_revision__field_p_feat_blocks_description',
+      'revision_table' => 'paragraph_r__b8c1c069f8',
       'format_col' => 'field_p_feat_blocks_description_format',
     ],
   ];
