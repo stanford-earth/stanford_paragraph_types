@@ -13,6 +13,7 @@ dependencies:
     - field_formatter_class
     - link
     - responsive_image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -42,13 +43,12 @@ bundle: stanford_film_card
 mode: default
 content:
   field_s_film_card_desc:
+    type: text_default
     weight: 0
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
     region: description
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_s_film_card_image:
     weight: 1
     label: hidden

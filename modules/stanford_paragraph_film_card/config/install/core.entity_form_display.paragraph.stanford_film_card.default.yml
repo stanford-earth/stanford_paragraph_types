@@ -11,19 +11,20 @@ dependencies:
   module:
     - image
     - link
+    - text
 id: paragraph.stanford_film_card.default
 targetEntityType: paragraph
 bundle: stanford_film_card
 mode: default
 content:
   field_s_film_card_desc:
+    type: text_textarea
     weight: 3
+    region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_s_film_card_image:
     weight: 0
     settings:
