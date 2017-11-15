@@ -11,6 +11,7 @@ dependencies:
     - ds
     - entity_reference_revisions
     - link
+    - text
 third_party_settings:
   ds:
     layout:
@@ -20,7 +21,7 @@ third_party_settings:
       entity_classes: all_classes
       settings:
         pattern:
-          field_templates: default
+          field_templates: only_content
           variants:
             dash_under:
               constant_value: ''
@@ -49,10 +50,10 @@ third_party_settings:
     regions:
       items:
         - field_p_doub_film_cards
-      link:
-        - field_p_doub_film_link
       subhead:
         - field_p_doub_film_desc
+      link:
+        - field_p_doub_film_link
       superhead:
         - field_p_doub_film_title
 id: paragraph.stanford_double_filmstrip.default
@@ -70,12 +71,12 @@ content:
     third_party_settings: {  }
     region: items
   field_p_doub_film_desc:
-    weight: 2
+    type: text_default
+    weight: 0
+    region: subhead
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: subhead
   field_p_doub_film_link:
     weight: 1
     label: hidden
