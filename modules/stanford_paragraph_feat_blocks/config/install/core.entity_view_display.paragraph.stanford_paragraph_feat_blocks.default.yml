@@ -10,6 +10,7 @@ dependencies:
   module:
     - ds
     - entity_reference_revisions
+    - text
 third_party_settings:
   ds:
     layout:
@@ -61,12 +62,12 @@ content:
     third_party_settings: {  }
     region: items
   field_p_feat_blocks_description:
-    weight: 1
+    type: text_default
+    weight: 0
+    region: subhead
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: subhead
   field_p_feat_blocks_super_head:
     weight: 2
     label: hidden

@@ -4,6 +4,7 @@ type: module
 core: 8.x
 package: Stanford
 dependencies:
+  - allowed_formats
   - ds
   - entity_reference_revisions
   - field
@@ -12,4 +13,5 @@ dependencies:
   - paragraphs
   - stanford_paragraph_simple_block
   - stanford_paragraph_types
+  - text
 version: 8.x-1.0-dev
