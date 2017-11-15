@@ -15,6 +15,7 @@ dependencies:
     - field_formatter_class
     - link
     - responsive_image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -48,12 +49,12 @@ bundle: stanford_paragraph_simple_block
 mode: default
 content:
   field_p_simple_block_description:
+    type: text_default
     weight: 0
+    region: description
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: description
   field_p_simple_block_image:
     weight: 1
     label: hidden

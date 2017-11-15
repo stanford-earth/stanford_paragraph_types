@@ -5,6 +5,7 @@ core: 8.x
 package: Stanford
 version: 8.x-1.0-dev
 dependencies:
+  - allowed_formats
   - ds
   - field
   - field_formatter_class
@@ -18,3 +19,4 @@ dependencies:
   - responsive_image
   - stanford_image_styles
   - stanford_paragraph_types
+  - text
