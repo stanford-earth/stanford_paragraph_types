@@ -32,6 +32,9 @@ function stanford_paragraph_callout_block_update_8100() {
   $field = \Drupal::entityTypeManager()
     ->getStorage('field_config')
     ->load("paragraph.$bundle.$name");
-  $field->save();
+
+  if ($field) {
+    $field->save();
+  }
 
 }
