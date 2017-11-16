@@ -3,6 +3,7 @@ description: 'Callout Filmstrip paragraph type that uses Slide paragraph type.'
 type: module
 core: 8.x
 dependencies:
+  - allowed_formats
   - ds
   - entity_reference_revisions
   - field
