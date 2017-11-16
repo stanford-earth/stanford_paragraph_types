@@ -8,6 +8,7 @@
 use Drupal\Core\Config\FileStorage;
 use Drupal\field\Entity\FieldConfig;
 use Drupal\field\Entity\FieldStorageConfig;
+use Drupal\Core\Entity\EntityStorageException;
 use Drupal\Core\Utility\UpdateException;
 use Drupal\Core\Logger\RfcLogLevel;
 
@@ -290,6 +291,7 @@ function _stanford_paragraph_types_change_to_formatted(array $fields = array(), 
     $new_field_storage['type'] = 'text_long';
     $new_field_storage['module'] = 'text';
     $new_field_storage['settings'] = [];
+
 
     // Step 5: Purge deleted fields data.
     // This is required to create new fields.
