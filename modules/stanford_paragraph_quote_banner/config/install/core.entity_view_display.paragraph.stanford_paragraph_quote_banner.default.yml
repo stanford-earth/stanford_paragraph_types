@@ -15,6 +15,7 @@ dependencies:
     - field_formatter_class
     - image
     - responsive_image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -71,12 +72,12 @@ content:
     type: responsive_image
     region: quote_image
   field_p_quote_text:
+    type: text_default
     weight: 0
+    region: quote
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: quote
   field_p_quote_title:
     weight: 2
     label: hidden

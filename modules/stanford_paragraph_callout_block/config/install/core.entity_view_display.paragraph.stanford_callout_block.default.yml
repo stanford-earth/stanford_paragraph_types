@@ -14,6 +14,7 @@ dependencies:
     - field_formatter_class
     - link
     - responsive_image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -52,13 +53,12 @@ content:
     type: responsive_image
     region: image
   field_p_callout_block_intro:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    type: text_default
+    weight: 0
     region: intro
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_p_callout_block_link:
     weight: 2
     label: hidden

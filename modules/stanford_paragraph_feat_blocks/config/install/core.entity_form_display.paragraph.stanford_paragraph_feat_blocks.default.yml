@@ -10,6 +10,7 @@ dependencies:
   module:
     - field_group
     - paragraphs
+    - text
 third_party_settings:
   field_group:
     group_wrapper:
@@ -83,13 +84,13 @@ content:
     third_party_settings: {  }
     region: content
   field_p_feat_blocks_description:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_p_feat_blocks_header_pos:
     weight: 6
     settings: {  }

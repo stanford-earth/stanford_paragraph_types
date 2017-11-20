@@ -4,6 +4,7 @@ core: 8.x
 package: Stanford
 version: 8.x-1.0-dev
 dependencies:
+  - allowed_formats
   - ds
   - entity_reference_revisions
   - field
@@ -11,3 +12,4 @@ dependencies:
   - paragraphs
   - stanford_paragraph_film_card
   - stanford_paragraph_types
+  - text

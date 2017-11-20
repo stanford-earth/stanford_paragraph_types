@@ -5,7 +5,12 @@
  * stanford_paragraph_callout_filmstrip.install
  */
 
-use Drupal\Core\Utility\UpdateException;
+ use Drupal\Core\Config\FileStorage;
+ use Drupal\field\Entity\FieldConfig;
+ use Drupal\field\Entity\FieldStorageConfig;
+ use Drupal\Core\Entity\EntityStorageException;
+ use Drupal\Core\Utility\UpdateException;
+ use Drupal\Core\Logger\RfcLogLevel;
 
 /**
  * Move text field to text area field and delete old field.
@@ -26,4 +31,48 @@ function stanford_paragraph_callout_filmstrip_update_8100() {
     ]));
   }
 
+}
+
+/**
+ * Fix up some missing data from update 8100.
+ */
+function stanford_paragraph_callout_filmstrip_update_8101() {
+
+  // Missing Bundle Mapping.
+  $keyval = \Drupal::keyValue("entity.definitions.bundle_field_map")->get('paragraph');
+  $keyval['field_p_callout_film_s_head'] = [
+    'type' => 'text_long',
+    'bundles' => [
+      'stanford_callout_filmstrip' => 'stanford_callout_filmstrip',
+    ]
+  ];
+  $keyval = \Drupal::keyValue("entity.definitions.bundle_field_map")->set('paragraph', $keyval);
+
+  // Missing UUIDs.
+  $field_config = \Drupal::configFactory()->getEditable('field.field.paragraph.stanford_callout_filmstrip.field_p_callout_film_s_head');
+  $storage_config = \Drupal::configFactory()->getEditable('field.storage.paragraph.field_p_callout_film_s_head');
+  $field_config->set("uuid", "4bea66d4-a269-4232-9706-197173498765")->save();
+  $storage_config->set("uuid", "18235c3b-4234-486d-8c54-0d5135a457ee")->save();
+
+  drupal_flush_all_caches();
+}
+
+/**
+ * Update field from plain text to rich.
+ */
+function stanford_paragraph_callout_filmstrip_update_8102() {
+  // Common function included here.
+  module_load_include('install', 'stanford_paragraph_types');
+
+  // The field and db tables to changes.
+  $fields = [
+    'field_p_callout_film_s_head' => [
+      'table' => 'paragraph__field_p_callout_film_s_head',
+      'revision_table' => 'paragraph_revision__field_p_callout_film_s_head',
+      'format_col' => 'field_p_callout_film_s_head_format',
+    ],
+  ];
+
+  // Change the DB tables and preserve the data.
+  _stanford_paragraph_types_change_to_formatted($fields);
 }

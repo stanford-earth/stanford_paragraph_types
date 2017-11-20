@@ -15,6 +15,7 @@ dependencies:
     - field_formatter_class
     - link
     - responsive_image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -49,14 +50,12 @@ bundle: stanford_slat
 mode: default
 content:
   field_p_slat_description:
+    type: text_default
     weight: 0
+    region: description
     label: hidden
     settings: {  }
-    third_party_settings:
-      field_formatter_class:
-        class: ''
-    type: basic_string
-    region: description
+    third_party_settings: {  }
   field_p_slat_image:
     weight: 1
     label: hidden

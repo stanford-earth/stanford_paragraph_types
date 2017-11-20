@@ -9,19 +9,20 @@ dependencies:
     - paragraphs.paragraphs_type.stanford_highlight_card
   module:
     - link
+    - text
 id: paragraph.stanford_highlight_card.default
 targetEntityType: paragraph
 bundle: stanford_highlight_card
 mode: default
 content:
   field_p_highlight_card_desc:
+    type: text_textarea
     weight: 2
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_p_highlight_card_link:
     weight: 3
     settings:

@@ -11,6 +11,7 @@ dependencies:
     - ds
     - entity_reference_revisions
     - field_formatter_class
+    - text
 third_party_settings:
   ds:
     layout:
@@ -78,12 +79,12 @@ content:
         ds_limit: ''
     region: items
   field_p_tall_filmstrip_desc:
-    weight: 1
+    type: text_default
+    weight: 0
+    region: subhead
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: subhead
   field_p_tall_filmstrip_title:
     weight: 2
     label: hidden

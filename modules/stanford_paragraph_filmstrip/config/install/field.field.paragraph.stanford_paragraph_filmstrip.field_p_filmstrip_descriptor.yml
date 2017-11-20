@@ -9,10 +9,10 @@ dependencies:
     - text
 third_party_settings:
   allowed_formats:
+    restricted_html: '0'
     content_editor: '0'
     markdown: '0'
-    basic_html: '0'
-    restricted_html: '0'
+    basic_html: basic_html
     full_html: '0'
     plain_text: '0'
 id: paragraph.stanford_paragraph_filmstrip.field_p_filmstrip_descriptor

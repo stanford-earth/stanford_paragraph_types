@@ -11,6 +11,7 @@ dependencies:
   module:
     - ds
     - link
+    - text
 third_party_settings:
   ds:
     layout:
@@ -36,12 +37,12 @@ bundle: stanford_highlight_card
 mode: alternative_1
 content:
   field_p_highlight_card_desc:
+    type: text_default
     weight: 0
+    region: description
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: basic_string
-    region: description
   field_p_highlight_card_link:
     weight: 1
     label: hidden

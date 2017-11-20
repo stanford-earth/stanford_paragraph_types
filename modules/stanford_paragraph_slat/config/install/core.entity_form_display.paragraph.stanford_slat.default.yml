@@ -14,13 +14,14 @@ dependencies:
     - field_group
     - image
     - link
+    - text
 third_party_settings:
   field_group:
     group_display_variants:
       children:
         - field_p_slat_image_side
       parent_name: ''
-      weight: 20
+      weight: 5
       format_type: tab
       format_settings:
         id: ''
@@ -35,13 +36,13 @@ bundle: stanford_slat
 mode: default
 content:
   field_p_slat_description:
+    type: text_textarea
     weight: 3
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_p_slat_image:
     weight: 0
     settings:

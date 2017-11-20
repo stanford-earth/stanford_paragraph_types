@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Utility\UpdateException;
+use Drupal\Core\Config\FileStorage;
+use Drupal\field\Entity\FieldStorageConfig;
 
 /**
  * Makes the title field into a long text field.

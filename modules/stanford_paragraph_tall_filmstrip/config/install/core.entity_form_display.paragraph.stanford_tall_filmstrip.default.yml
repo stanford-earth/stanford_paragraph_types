@@ -10,13 +10,14 @@ dependencies:
   module:
     - field_group
     - paragraphs
+    - text
 third_party_settings:
   field_group:
     group_display_variants:
       children:
         - field_p_tall_filmstrip_expanded
       parent_name: ''
-      weight: 20
+      weight: 3
       format_type: tab
       format_settings:
         id: ''
@@ -43,13 +44,13 @@ content:
     third_party_settings: {  }
     region: content
   field_p_tall_filmstrip_desc:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
       rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textarea
-    region: content
   field_p_tall_filmstrip_expanded:
     weight: 3
     settings:

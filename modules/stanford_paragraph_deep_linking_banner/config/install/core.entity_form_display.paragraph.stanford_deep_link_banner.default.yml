@@ -9,67 +9,29 @@ dependencies:
     - image.style.thumbnail
     - paragraphs.paragraphs_type.stanford_deep_link_banner
   module:
-    - field_group
+    - allowed_formats
     - image
     - paragraphs
-third_party_settings:
-  field_group:
-    group_p_deep_groups:
-      children:
-        - group_p_deep_group_1
-        - group_p_deep_group_2
-      parent_name: ''
-      weight: 3
-      format_type: tabs
-      format_settings:
-        id: ''
-        classes: ''
-        direction: vertical
-      label: Groups
-    group_p_deep_group_1:
-      children:
-        - field_p_deep_group_title_1
-        - field_p_deep_group_links_1
-      parent_name: group_p_deep_groups
-      weight: 20
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: open
-        description: ''
-        required_fields: true
-      label: 'Group 1'
-    group_p_deep_group_2:
-      children:
-        - field_p_deep_group_title_2
-        - field_p_deep_group_links_2
-      parent_name: group_p_deep_groups
-      weight: 21
-      format_type: tab
-      format_settings:
-        id: ''
-        classes: ''
-        formatter: closed
-        description: ''
-        required_fields: true
-      label: 'Group 2'
+    - text
 id: paragraph.stanford_deep_link_banner.default
 targetEntityType: paragraph
 bundle: stanford_deep_link_banner
 mode: default
 content:
   field_p_deep_caption:
+    type: text_textarea
     weight: 2
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
+    settings:
+      rows: 3
+      placeholder: ''
+    third_party_settings:
+      allowed_formats:
+        hide_help: '1'
+        hide_guidelines: '1'
   field_p_deep_cards:
     type: entity_reference_paragraphs
-    weight: 22
+    weight: 3
     settings:
       title: Paragraph
       title_plural: Paragraphs
