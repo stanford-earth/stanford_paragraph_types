@@ -18,20 +18,11 @@ function stanford_paragraph_feat_blocks_update_8100() {
       'table' => 'paragraph__field_p_feat_blocks_description',
       'revision_table' => 'paragraph_r__b8c1c069f8',
       'format_col' => 'field_p_feat_blocks_description_format',
+      'value_col' => 'field_p_feat_blocks_description_value',
     ],
   ];
 
   // Change the DB tables and preserve the data.
   _stanford_paragraph_types_change_to_formatted($fields);
-
-  // Update and save the new config.
-  $name = 'field_p_feat_blocks_description';
-  $bundle = "stanford_paragraph_feat_blocks";
-
-  // Do it.
-  $field = \Drupal::entityTypeManager()
-    ->getStorage('field_config')
-    ->load("paragraph.$bundle.$name");
-  $field->save();
 
 }

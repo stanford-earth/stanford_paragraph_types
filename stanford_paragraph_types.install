@@ -311,6 +311,10 @@ function _stanford_paragraph_types_change_to_formatted(array $fields = array(), 
       foreach ($rows as $row) {
         $row = (array) $row;
         $row[$f['format_col']] = 'basic_html';
+        // Wrap the original text in a p tag.
+        if (isset($f['value_col'])) {
+          $row[$f['value_col']] = "<p>" . $row[$f['value_col']] . "</p>";
+        }
         $database->insert($table)->fields($row)->execute();
       }
     }
@@ -318,6 +322,10 @@ function _stanford_paragraph_types_change_to_formatted(array $fields = array(), 
       foreach ($revision_rows as $row) {
         $row = (array) $row;
         $row[$f['format_col']] = 'basic_html';
+        // Wrap the original text in a p tag.
+        if (isset($f['value_col'])) {
+          $row[$f['value_col']] = "<p>" . $row[$f['value_col']] . "</p>";
+        }
         $database->insert($revision_table)->fields($row)->execute();
       }
     }

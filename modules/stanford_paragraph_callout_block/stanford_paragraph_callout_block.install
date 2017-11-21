@@ -18,23 +18,11 @@ function stanford_paragraph_callout_block_update_8100() {
       'table' => 'paragraph__field_p_callout_block_intro',
       'revision_table' => 'paragraph_revision__field_p_callout_block_intro',
       'format_col' => 'field_p_callout_block_intro_format',
+      'value_col' => 'field_p_callout_block_intro_value',
     ],
   ];
 
   // Change the DB tables and preserve the data.
   _stanford_paragraph_types_change_to_formatted($fields);
-
-  // Update and save the new config.
-  $name = 'field_p_callout_block_intro';
-  $bundle = "stanford_callout_block";
-
-  // Do it.
-  $field = \Drupal::entityTypeManager()
-    ->getStorage('field_config')
-    ->load("paragraph.$bundle.$name");
-
-  if ($field) {
-    $field->save();
-  }
 
 }

@@ -70,6 +70,7 @@ function stanford_paragraph_callout_filmstrip_update_8102() {
       'table' => 'paragraph__field_p_callout_film_s_head',
       'revision_table' => 'paragraph_revision__field_p_callout_film_s_head',
       'format_col' => 'field_p_callout_film_s_head_format',
+      'value_col' => 'field_p_callout_film_s_head_value',
     ],
   ];
 
