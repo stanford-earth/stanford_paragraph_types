@@ -18,20 +18,11 @@ function stanford_paragraph_quote_banner_update_8100() {
       'table' => 'paragraph__field_p_quote_text',
       'revision_table' => 'paragraph_revision__field_p_quote_text',
       'format_col' => 'field_p_quote_text_format',
+      'value_col' => 'field_p_quote_text_value',
     ],
   ];
 
   // Change the DB tables and preserve the data.
   _stanford_paragraph_types_change_to_formatted($fields);
-
-  // Update and save the new config.
-  $name = 'field_p_quote_text';
-  $bundle = "stanford_paragraph_quote_banner";
-
-  // Do it.
-  $field = \Drupal::entityTypeManager()
-    ->getStorage('field_config')
-    ->load("paragraph.$bundle.$name");
-  $field->save();
 
 }

@@ -18,20 +18,11 @@ function stanford_paragraph_film_card_update_8100() {
       'table' => 'paragraph__field_s_film_card_desc',
       'revision_table' => 'paragraph_revision__field_s_film_card_desc',
       'format_col' => 'field_s_film_card_desc_format',
+      'value_col' => 'field_s_film_card_desc_value',
     ],
   ];
 
   // Change the DB tables and preserve the data.
   _stanford_paragraph_types_change_to_formatted($fields);
-
-  // Update and save the new config.
-  $name = 'field_s_film_card_desc';
-  $bundle = "stanford_film_card";
-
-  // Do it.
-  $field = \Drupal::entityTypeManager()
-    ->getStorage('field_config')
-    ->load("paragraph.$bundle.$name");
-  $field->save();
 
 }

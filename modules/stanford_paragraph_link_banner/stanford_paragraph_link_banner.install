@@ -18,20 +18,11 @@ function stanford_paragraph_link_banner_update_8100() {
       'table' => 'paragraph__field_p_link_banner_description',
       'revision_table' => 'paragraph_r__0dd148bc3d',
       'format_col' => 'field_p_link_banner_description_format',
+      'value_col' => 'field_p_link_banner_description_value',
     ],
   ];
 
   // Change the DB tables and preserve the data.
   _stanford_paragraph_types_change_to_formatted($fields);
-
-  // Update and save the new config.
-  $name = 'field_p_link_banner_description';
-  $bundle = "stanford_link_banner";
-
-  // Do it.
-  $field = \Drupal::entityTypeManager()
-    ->getStorage('field_config')
-    ->load("paragraph.$bundle.$name");
-  $field->save();
 
 }

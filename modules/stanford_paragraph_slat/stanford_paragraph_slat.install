@@ -18,20 +18,11 @@ function stanford_paragraph_slat_update_8100() {
       'table' => 'paragraph__field_p_slat_description',
       'revision_table' => 'paragraph_revision__field_p_slat_description',
       'format_col' => 'field_p_slat_description_format',
+      'value_col' => 'field_p_slat_description_value',
     ],
   ];
 
   // Change the DB tables and preserve the data.
   _stanford_paragraph_types_change_to_formatted($fields);
-
-  // Update and save the new config.
-  $name = 'field_p_slat_description';
-  $bundle = "stanford_slat";
-
-  // Do it.
-  $field = \Drupal::entityTypeManager()
-    ->getStorage('field_config')
-    ->load("paragraph.$bundle.$name");
-  $field->save();
 
 }
