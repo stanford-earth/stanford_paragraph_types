@@ -17,4 +17,4 @@ dependencies:
   - stanford_image_styles
   - stanford_paragraph_highlight_card
   - stanford_paragraph_types
-version: 8.x-1.0-alpha2
+version: 8.x-1.0-dev

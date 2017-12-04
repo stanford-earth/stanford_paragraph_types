@@ -15,4 +15,4 @@ dependencies:
   - stanford_paragraph_slide
   - text
 package: Stanford
-version: 8.x-1.0-alpha2
+version: 8.x-1.0-dev
