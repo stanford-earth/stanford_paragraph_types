@@ -1,5 +1,12 @@
 Stanford Paragraph Types
 
+Version 8.x-1.0-alpha2                                                       YYYY-MM-DD
+--------------------------------------------------------------------------------
+
+- Allowed wysiwy on many previously text only fields
+- Upgrade path for new field data types
+- Set default editor to basic_html for many text fields
+
 Version 8.x-1.0-alpha1                                                       YYYY-MM-DD
 --------------------------------------------------------------------------------
 
