@@ -9,7 +9,6 @@ dependencies:
     - field.field.paragraph.stanford_slat.field_p_slat_link
     - field.field.paragraph.stanford_slat.field_p_slat_title
     - paragraphs.paragraphs_type.stanford_slat
-    - responsive_image.styles.wide
   module:
     - ds
     - field_formatter_class
