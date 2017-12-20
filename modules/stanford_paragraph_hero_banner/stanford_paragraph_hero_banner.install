@@ -64,3 +64,25 @@ function stanford_paragraph_hero_banner_update_8102() {
     }
   }
 }
+
+/**
+ * Make the credit field wysiwyg.
+ * @return [type] [description]
+ */
+function stanford_paragraph_hero_banner_update_8103() {
+  // Common function included here.
+  module_load_include('install', 'stanford_paragraph_types');
+
+  // The field and db tables to changes.
+  $fields = [
+    'field_p_hero_banner_photo_credit' => [
+      'table' => 'paragraph__field_p_hero_banner_photo_credit',
+      'revision_table' => 'paragraph_revision__field_p_hero_banner_photo_credit',
+      'format_col' => 'field_p_hero_banner_photo_credit_format',
+      'value_col' => 'field_p_hero_banner_photo_credit_value',
+    ],
+  ];
+
+  // Change the DB tables and preserve the data.
+  _stanford_paragraph_types_change_to_formatted($fields);
+}
