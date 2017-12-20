@@ -77,7 +77,7 @@ function stanford_paragraph_hero_banner_update_8103() {
   $fields = [
     'field_p_hero_banner_photo_credit' => [
       'table' => 'paragraph__field_p_hero_banner_photo_credit',
-      'revision_table' => 'paragraph_revision__field_p_hero_banner_photo_credit',
+      'revision_table' => 'paragraph_r__2d27ca4e12',
       'format_col' => 'field_p_hero_banner_photo_credit_format',
       'value_col' => 'field_p_hero_banner_photo_credit_value',
     ],
