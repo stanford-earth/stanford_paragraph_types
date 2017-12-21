@@ -4,6 +4,7 @@ type: module
 core: 8.x
 package: Stanford
 dependencies:
+  - allowed_formats
   - ds
   - field
   - field_formatter_class
@@ -18,4 +19,5 @@ dependencies:
   - stanford_image_styles
   - stanford_paragraph_types
   - stanford_paragraph_types_view_mode
+  - text
 version: 8.x-1.0-dev

@@ -8,6 +8,7 @@ dependencies:
     - paragraphs.paragraphs_type.stanford_responsive_image
   module:
     - image
+    - text
 id: paragraph.stanford_responsive_image.default
 targetEntityType: paragraph
 bundle: stanford_responsive_image
@@ -22,13 +23,13 @@ content:
     type: image_image
     region: content
   field_p_responsive_image_cred:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
 hidden:
   created: true
   status: true

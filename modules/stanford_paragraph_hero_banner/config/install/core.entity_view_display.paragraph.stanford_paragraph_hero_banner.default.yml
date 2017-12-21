@@ -17,6 +17,7 @@ dependencies:
     - ds
     - field_formatter_class
     - responsive_image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -86,13 +87,12 @@ content:
     type: responsive_image
     region: image
   field_p_hero_banner_photo_credit:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    type: text_default
+    weight: 0
     region: footer
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
   field_p_hero_banner_sub_head:
     weight: 3
     label: hidden
