@@ -16,6 +16,7 @@ dependencies:
   module:
     - field_group
     - focal_point
+    - text
 third_party_settings:
   field_group:
     group_display_variants:
@@ -64,13 +65,13 @@ content:
     type: options_select
     region: content
   field_p_hero_banner_photo_credit:
+    type: text_textarea
     weight: 1
+    region: content
     settings:
-      size: 60
+      rows: 5
       placeholder: ''
     third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_p_hero_banner_sub_head:
     weight: 3
     settings:

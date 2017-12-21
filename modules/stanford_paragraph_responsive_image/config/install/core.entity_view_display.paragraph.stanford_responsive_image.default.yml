@@ -10,6 +10,7 @@ dependencies:
     - ds
     - field_formatter_class
     - responsive_image
+    - text
 third_party_settings:
   ds:
     layout:
@@ -39,11 +40,10 @@ content:
     type: responsive_image
     region: content
   field_p_responsive_image_cred:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
+    type: text_default
+    weight: 0
     region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
