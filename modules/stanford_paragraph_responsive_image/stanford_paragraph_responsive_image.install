@@ -11,7 +11,7 @@ function stanford_paragraph_responsive_image_update_8100() {
   $fields = [
     'field_p_responsive_image_cred' => [
       'table' => 'paragraph__field_p_responsive_image_cred',
-      'revision_table' => 'paragraph_revision__field_p_responsive_image_cred',
+      'revision_table' => 'paragraph_r__d9a4509bde',
       'format_col' => 'field_p_responsive_image_cred_format',
       'value_col' => 'field_p_responsive_image_cred_value',
     ],
