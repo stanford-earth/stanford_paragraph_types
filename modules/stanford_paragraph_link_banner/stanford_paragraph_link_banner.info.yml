@@ -17,4 +17,4 @@ dependencies:
   - stanford_paragraph_link_item
   - stanford_paragraph_types
   - text
-version: 8.x-1.0-alpha3
+version: 8.x-1.0-dev

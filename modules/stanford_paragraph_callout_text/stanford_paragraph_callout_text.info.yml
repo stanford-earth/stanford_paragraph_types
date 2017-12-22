@@ -11,4 +11,4 @@ dependencies:
   - paragraphs
   - stanford_paragraph_types
   - text
-version: 8.x-1.0-alpha3
+version: 8.x-1.0-dev

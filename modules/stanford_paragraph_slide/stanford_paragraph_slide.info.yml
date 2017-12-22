@@ -18,4 +18,4 @@ dependencies:
   - stanford_paragraph_film_card
   - stanford_paragraph_types
   - stanford_paragraph_types_view_mode
-version: 8.x-1.0-alpha3
+version: 8.x-1.0-dev
