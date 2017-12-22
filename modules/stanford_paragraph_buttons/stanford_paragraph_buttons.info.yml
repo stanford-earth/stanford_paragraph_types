@@ -10,4 +10,4 @@ dependencies:
   - text
   - stanford_paragraph_types
   - field_formatter_class
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha3

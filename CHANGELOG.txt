@@ -1,5 +1,14 @@
 Stanford Paragraph Types
 
+Version 8.x-1.0-alpha3                                                       YYYY-MM-DD
+--------------------------------------------------------------------------------
+
+- Changed hero banner credit field to rich text from plain
+- Updated placement of hero banner credit field
+- Changed responsive image credit field to rich text from plain
+- Updated placement of hero banner credit field
+- Removed image style for wide in slat Paragraph
+
 Version 8.x-1.0-alpha2                                                       YYYY-MM-DD
 --------------------------------------------------------------------------------
 

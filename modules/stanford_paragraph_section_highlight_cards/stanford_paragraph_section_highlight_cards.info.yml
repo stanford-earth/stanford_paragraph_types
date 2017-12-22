@@ -11,5 +11,5 @@ dependencies:
   - paragraphs
   - stanford_paragraph_highlight_card
   - text
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha3
 package: Stanford

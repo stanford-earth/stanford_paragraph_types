@@ -16,4 +16,4 @@ dependencies:
   - stanford_paragraph_tall_slide
   - stanford_paragraph_types
   - text
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha3
