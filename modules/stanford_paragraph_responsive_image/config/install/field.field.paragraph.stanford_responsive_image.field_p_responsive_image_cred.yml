@@ -19,7 +19,7 @@ id: paragraph.stanford_responsive_image.field_p_responsive_image_cred
 field_name: field_p_responsive_image_cred
 entity_type: paragraph
 bundle: stanford_responsive_image
-label: 'Photo Credit'
+label: 'Caption'
 description: ''
 required: false
 translatable: false
