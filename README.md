@@ -1,5 +1,5 @@
 # [Stanford Paragraph Types](https://github.com/SU-SWS/stanford_paragraph_types)
-##### Version: 8.x-1.0-dev
+##### Version: 8.x-1.0-alpha4
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)
 [Changelog.txt](CHANGELOG.txt)

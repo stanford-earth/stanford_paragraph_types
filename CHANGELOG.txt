@@ -1,5 +1,9 @@
 Stanford Paragraph Types
 
+Version 8.x-1.0-alpha4                                                       YYYY-MM-DD
+--------------------------------------------------------------------------------
+- Changed photo credit field to caption.
+
 Version 8.x-1.0-alpha3                                                       YYYY-MM-DD
 --------------------------------------------------------------------------------
 
