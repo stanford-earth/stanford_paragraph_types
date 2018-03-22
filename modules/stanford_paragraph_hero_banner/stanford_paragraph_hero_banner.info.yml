@@ -20,4 +20,4 @@ dependencies:
   - stanford_paragraph_types
   - stanford_paragraph_types_view_mode
   - text
-version: 8.x-1.0-alpha4
+version: 8.x-1.0-dev
