@@ -3,7 +3,7 @@ description: 'Simple slat paragraph type.'
 type: module
 core: 8.x
 package: Stanford
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha4
 dependencies:
   - allowed_formats
   - ds

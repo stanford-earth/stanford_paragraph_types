@@ -6,4 +6,4 @@ package: Stanford
 dependencies:
   - ds
   - paragraphs
-version: 8.x-1.0-dev
+version: 8.x-1.0-alpha4
