@@ -1,4 +1,8 @@
 Stanford Paragraph Types
+
+Version 8.x-1.0-alpha6                                                2018-10-16
+--------------------------------------------------------------------------------
+- Add option for muted playback so autoplay works on Chrome.
   
 Version 8.x-1.0-alpha5                                                2018-06-14
 --------------------------------------------------------------------------------
