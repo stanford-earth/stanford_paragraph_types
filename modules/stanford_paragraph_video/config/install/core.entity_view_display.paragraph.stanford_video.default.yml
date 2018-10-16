@@ -4,6 +4,7 @@ dependencies:
   config:
     - field.field.paragraph.stanford_video.field_p_video_autoplay
     - field.field.paragraph.stanford_video.field_p_video_loop
+    - field.field.paragraph.stanford_video.field_p_video_muted
     - field.field.paragraph.stanford_video.field_p_video_subheading
     - field.field.paragraph.stanford_video.field_p_video_title
     - field.field.paragraph.stanford_video.field_p_video_url
@@ -82,6 +83,7 @@ content:
       width: 854
       height: 480
       autoplay: false
+      muted: false
     third_party_settings:
       field_formatter_class:
         class: ''
@@ -91,3 +93,4 @@ hidden:
   field_p_video_autoplay: true
   field_p_video_loop: true
   field_p_video_width: true
+  field_p_video_muted: true

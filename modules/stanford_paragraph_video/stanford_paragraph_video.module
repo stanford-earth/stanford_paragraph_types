@@ -21,7 +21,6 @@ function stanford_paragraph_video_preprocess_field(&$variables) {
 
   /** @var \Drupal\Core\Field\FieldItemList $autoplay_field */
   $autoplay_field = $variables['element']['#object']->get('field_p_video_autoplay');
-
   if ($autoplay_field && $autoplay_field->getValue()) {
     $autoplay = $autoplay_field->getValue();
 
@@ -31,6 +30,7 @@ function stanford_paragraph_video_preprocess_field(&$variables) {
     }
   }
 
+  // Pass through the value of the loop field.
   $loop_field = $variables['element']['#object']->get('field_p_video_loop');
   if ($loop_field && $loop_field->getValue()) {
     $loop = $loop_field->getValue();
@@ -42,6 +42,21 @@ function stanford_paragraph_video_preprocess_field(&$variables) {
       $video_hash = array_pop($explody);
       $variables['items'][0]['content']['children']['#query']['playlist'] = $video_hash;
     }
+  }
+
+  try {
+    $muted_field = $variables['element']['#object']->get('field_p_video_muted');
+    if ($muted_field && $muted_field->getValue()) {
+      $muted_field = $muted_field->getValue();
+
+      // If the paragraph is checked to autoplay, set the query parameter.
+      if ($muted_field[0]['value']) {
+        $variables['items'][0]['content']['children']['#query']['mute'] = TRUE;
+      }
+    }
+  }
+  catch (\Exception $e) {
+    \Drupal::logger('stanford_paragraph_video')->error($e->getMessage());
   }
 
 }
